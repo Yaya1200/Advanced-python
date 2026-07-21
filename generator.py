@@ -1,8 +1,9 @@
-def value(k):
-  for i in range(k):
-    yield i
-for i in value(4):
-  print(i)
-value1 = iter(value(4))
-for i in value1:
-  print(i)
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+for i in fibonacci(10):
+    print(i)
+
